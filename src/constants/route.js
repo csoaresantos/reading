@@ -1,3 +1,3 @@
-export const HOME = "/home";
-export const LANDING = '/landing';
+export const HOME = "/";
+export const LANDING = '/';
 export const ADD = "/addBook";
