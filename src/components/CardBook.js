@@ -73,14 +73,14 @@ class AddBook extends Component {
                     {/* <IconButton aria-label="Play/pause">
                       <PlayArrowIcon className={classes.playIcon} />
                     </IconButton> */}
-                    <label>{this.props.pagact}/{this.props.pags}</label>
+                    <label>{this.props.pag}/{this.props.pags}</label>
                     <IconButton aria-label="Next">
                       {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
                     </IconButton>
                   </div>
                 </div>
               </Card>
-              <LinearDeterminate pagact={this.props.pagact} pags={this.props.pags} />
+              <LinearDeterminate pagact={this.props.pag} pags={this.props.pags} />
             </div>
           )
     }

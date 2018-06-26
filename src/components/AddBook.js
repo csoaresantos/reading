@@ -100,7 +100,7 @@ class FullScreenDialog extends React.Component {
             </Toolbar>
           </AppBar>
           <React.Fragment>
-            
+          <div style={{padding: 10}}>  
 
               <TextField className="input-field"
                 type="text"
@@ -132,7 +132,7 @@ class FullScreenDialog extends React.Component {
                 defaultValue={''}
                 required
                 onChange={e => this.pags = e.target.value} />
-            
+            </div>
           </React.Fragment>
           </form>
         </Dialog>

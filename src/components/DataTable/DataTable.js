@@ -3,7 +3,7 @@ import {Table, TableBody, TableCell, TableHead, TableRow, Typography} from "mate
 
 export const DataTable = ({data}) => {
     return <React.Fragment>
-        <Table selectable={false}>
+        <Table>
             <TableHead>
                 <TableRow>
                     <TableCell>Title</TableCell>

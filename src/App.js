@@ -13,16 +13,23 @@ import AddIcon from '@material-ui/icons/Add';
 import Icon from '@material-ui/core/Icon';
 import DeleteIcon from '@material-ui/icons/Delete';
 import SimpleModalWrapped from './components/AddBook'
+import Books from './components/Books'
+
+const theme = createMuiTheme({
+  palette: {
+      primary: red,
+  },
+});
 
 class App extends Component {
   constructor(props) {
     super(props)
-    this.state = {data: []}
+    this.state = {data: [], cardBooks: []}
   }
 
   render() {
     return (
-      <MuiThemeProvider theme={this.style}>
+      <MuiThemeProvider theme={theme}>
         <React.Fragment>
           <AppBar position="static">
             <Toolbar>
@@ -31,15 +38,14 @@ class App extends Component {
             </Typography>
             </Toolbar>
           </AppBar>
-          /*
-          <DataTable data={this.state.data} />
-          */
+          <Books data={this.state.data} />
           <SimpleModalWrapped />
         </React.Fragment>
       </MuiThemeProvider>
     );
   }
   componentDidMount() {
+    const datas = [];
     FirebaseService.getDataList('books', (retrieveData) => this.setState({data: retrieveData}));
   }
 }
